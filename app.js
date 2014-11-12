@@ -4,6 +4,11 @@ angular.module('azuregruntdemo', ['ui.bootstrap','ui.utils','ngRoute','ngAnimate
 
 angular.module('azuregruntdemo').config(function($routeProvider) {
 
+    $routeProvider.when('/home',{
+        templateUrl: 'partial/home/home.html',
+        controllerAs: 'vm',
+        controller: 'HomeCtrl'
+});
     /* Add New Routes Above */
     $routeProvider.otherwise({redirectTo:'/home'});
 
