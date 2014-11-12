@@ -141,6 +141,7 @@ exitWithMessageOnError "Kudu Sync to Target failed"
 
 # Post deployment stub
 if [[ -n "$POST_DEPLOYMENT_ACTION" ]]; then
+  echo Running Post Deployment Action
   POST_DEPLOYMENT_ACTION=${POST_DEPLOYMENT_ACTION//\"}
   cd "${POST_DEPLOYMENT_ACTION_DIR%\\*}"
   "$POST_DEPLOYMENT_ACTION"
