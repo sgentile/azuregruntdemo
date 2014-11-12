@@ -133,15 +133,10 @@ echo Starting KuduSync
 "$KUDU_SYNC_CMD" -v 500 -f "$DEPLOYMENT_SOURCE/dist" -t "$DEPLOYMENT_TARGET" -n "$NEXT_MANIFEST_PATH" -p "$PREVIOUS_MANIFEST_PATH" -i ".git;.hg;.deployment;deploy.sh"
 exitWithMessageOnError "Kudu Sync to Target failed"
 
-#echo Removing web.config
-#rm web.config
-#exitWithMessageOnError "Remove web.config failed"
-
 ##################################################################################################################################
 
 # Post deployment stub
 if [[ -n "$POST_DEPLOYMENT_ACTION" ]]; then
-  echo Running Post Deployment Action
   POST_DEPLOYMENT_ACTION=${POST_DEPLOYMENT_ACTION//\"}
   cd "${POST_DEPLOYMENT_ACTION_DIR%\\*}"
   "$POST_DEPLOYMENT_ACTION"
