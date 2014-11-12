@@ -95,7 +95,8 @@ module.exports = function (grunt) {
         files: [
           {src: ['img/**'], dest: 'dist/'},
           {src: ['bower_components/font-awesome/fonts/**'], dest: 'dist/',filter:'isFile',expand:true},
-          {src: ['bower_components/bootstrap/fonts/**'], dest: 'dist/',filter:'isFile',expand:true}
+          {src: ['bower_components/bootstrap/fonts/**'], dest: 'dist/',filter:'isFile',expand:true},
+            {src: ['web.config'], dest: 'dist/web.config'}
           //{src: ['bower_components/angular-ui-utils/ui-utils-ieshiv.min.js'], dest: 'dist/'},
           //{src: ['bower_components/select2/*.png','bower_components/select2/*.gif'], dest:'dist/css/',flatten:true,expand:true},
           //{src: ['bower_components/angular-mocks/angular-mocks.js'], dest: 'dist/'}
@@ -164,7 +165,7 @@ module.exports = function (grunt) {
         }
       }
     },
-    //Imagemin has issues on Windows.  
+    //Imagemin has issues on Windows.
     //To enable imagemin:
     // - "npm install grunt-contrib-imagemin"
     // - Comment in this section
