@@ -145,6 +145,6 @@ exitWithMessageOnError "Kudu Sync to Target failed"
 #  cd "${POST_DEPLOYMENT_ACTION_DIR%\\*}"
 #  "$POST_DEPLOYMENT_ACTION"
 #  exitWithMessageOnError "post deployment action failed"
-fi
+#fi
 
 echo "Finished successfully."
